@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="diablo">
+        <Description value="Diablo II"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="skyrim">
+        <Description value="The Elder Scrolls: Skyrim"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+</Facts>
