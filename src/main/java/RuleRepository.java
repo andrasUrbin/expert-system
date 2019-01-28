@@ -1,33 +1,41 @@
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class RuleRepository {
-
-    private Map<String, Question> questions = new HashMap<>();
-    private Iterator<Question> iterator;
+    private Iterator<Question> questionIterator;
+    private List<Question> questions;
 
     public RuleRepository() {
-        this.iterator = new RuleRepository.QuestionIterator();
+        this.questions = new ArrayList<>();
+        this.questionIterator = new QuestionIterator();
     }
 
     public void addQuestion(Question question) {
-        questions.put(question.getId(), question);
+        this.questions.add(question);
     }
 
     public Iterator<Question> getIterator() {
-        return this.iterator;
+        return this.questionIterator;
+    }
+
+    public List<Question> getQuestions() {
+        return this.questions;
     }
 
     public class QuestionIterator implements Iterator {
+        int index;
+
         @Override
         public boolean hasNext() {
-            return false;
+            return index < questions.size();
         }
 
         @Override
-        public Object next() {
-            return null;
+        public Question next() {
+            if (this.hasNext()) {
+                return questions.get(index++);
+            } else {
+                return null;
+            }
         }
     }
 }

@@ -17,13 +17,17 @@ public abstract class XMLParser {
             DocumentBuilder db = dbf.newDocumentBuilder();
             InputStream is = new FileInputStream(xmlPath);
             this.document = db.parse(is);
+            this.document.getDocumentElement().normalize();
         } catch (ParserConfigurationException e) {
-
+            e.printStackTrace();
         } catch (IOException e) {
-
+            e.printStackTrace();
         } catch (SAXException e) {
-
+            e.printStackTrace();
         }
+    }
 
+    public Document getDocument() {
+        return document;
     }
 }

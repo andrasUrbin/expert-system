@@ -10,6 +10,4 @@ public class SingleValue extends Value {
     public String getParam() {
         return param;
     }
-
-
 }

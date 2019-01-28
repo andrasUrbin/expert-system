@@ -2,11 +2,12 @@ import java.util.*;
 
 public class FactRepository {
 
-    private List<Fact> facts = new ArrayList<>();
+    private List<Fact> facts;
     private Iterator<Fact> iterator;
 
     public FactRepository() {
-        this.iterator = new FactRepository.FactIterator();
+        this.facts = new ArrayList<>();
+        this.iterator = new FactIterator();
     }
 
     public void addFact(Fact fact) {
@@ -17,16 +18,25 @@ public class FactRepository {
         return this.iterator;
     }
 
+    public List<Fact> getFacts() {
+        return this.facts;
+    }
+
     public class FactIterator implements Iterator {
+        int index;
+
         @Override
         public boolean hasNext() {
-            return false;
+            return index < facts.size();
         }
 
         @Override
         public Object next() {
-            return null;
+            if (this.hasNext()) {
+                return facts.get(index++);
+            } else {
+                return null;
+            }
         }
-
     }
 }

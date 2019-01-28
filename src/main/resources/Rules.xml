@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rules>
     <Rule id="single">
-        <Question>"Do you prefer single player experience?"</Question>
+        <Question>Do you prefer single player experience?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -12,7 +12,7 @@
         </Answer>
     </Rule>
     <Rule id="multi">
-        <Question>"Do you prefer multiplayer experience?"</Question>
+        <Question>Do you prefer multiplayer experience?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -23,7 +23,7 @@
         </Answer>
     </Rule>
     <Rule id="f2play">
-        <Question>"Do you have money to spend?"</Question>
+        <Question>Do you have money to spend?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="no"/>
@@ -34,7 +34,7 @@
         </Answer>
     </Rule>
     <Rule id="mature">
-        <Question>"Are you over 16 years old?"</Question>
+        <Question>Are you over 16 years old?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -45,7 +45,7 @@
         </Answer>
     </Rule>
     <Rule id="pc">
-        <Question>"Do you want to play on a PC?"</Question>
+        <Question>Do you want to play on a PC?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -56,7 +56,7 @@
         </Answer>
     </Rule>
     <Rule id="console">
-        <Question>"Do you want to play on a console?"</Question>
+        <Question>Do you want to play on a console?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
