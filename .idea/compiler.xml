@@ -9,8 +9,5 @@
         <module name="expert-system" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="expert-system" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
