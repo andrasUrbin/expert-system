@@ -18,8 +18,9 @@ public class Main {
         */
 
         esp.collectAnswers();
+        System.out.println(esp.getAnswers());
 
-       // System.out.println(ruleParser.getRuleRepository().getIterator().hasNext());
+        // System.out.println(ruleParser.getRuleRepository().getIterator().hasNext());
 
 
 
