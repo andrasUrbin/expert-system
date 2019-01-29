@@ -6,7 +6,13 @@ public class ESProvider {
     private FactParser factParser;
     private RuleParser ruleParser;
     private Map<String, Boolean> answers;
+    private Answer answer = new Answer();
 
+
+
+    public Map<String, Boolean> getAnswers() {
+        return answers;
+    }
 
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
         this.factParser = factParser;
@@ -17,14 +23,17 @@ public class ESProvider {
     public void collectAnswers() {
         answers = new HashMap<>();
         Ui ui = new Ui();
+
         while(ruleParser.getRuleRepository().getIterator().hasNext()){
             String input;
-            do{
-                System.out.println(ruleParser.getRuleRepository().getIterator().next().getQuestion());
-                input = ui.getInput();
-            }while(!isValid(input));
+            int index = ruleParser.getRuleRepository().getIterator()
             for (Question question:ruleParser.getRuleRepository().getQuestions()) {
-                answers.put(question.getId(), Boolean.parseBoolean(input));
+                do {
+                    System.out.println(ruleParser.getRuleRepository().getIterator().next().getQuestion());
+                    input = ui.getInput();
+                    answers.put(question.getId(), answer.evaluateAnswerByInput(input));
+                } while (!isValid(input));
+
             }
         }
 

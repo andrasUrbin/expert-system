@@ -9,7 +9,7 @@ public class Answer {
 
         if (input.equalsIgnoreCase("yes")) {
             return true;
-        } else if (input.equalsIgnoreCase("no")) {
+        } else if(input.equalsIgnoreCase("no")) {
             return false;
         }
         return false;
