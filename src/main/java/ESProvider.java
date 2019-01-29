@@ -24,9 +24,11 @@ public class ESProvider {
                 input = ui.getInput();
             }while(!isValid(input));
             for (Question question:ruleParser.getRuleRepository().getQuestions()) {
+
                 answers.put(question.getId(), Boolean.parseBoolean(input));
             }
         }
+        System.out.println(answers);
 
     }
 
