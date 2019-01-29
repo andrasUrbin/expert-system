@@ -9,7 +9,6 @@ public class ESProvider {
     private Answer answer = new Answer();
 
 
-
     public Map<String, Boolean> getAnswers() {
         return answers;
     }
@@ -24,14 +23,14 @@ public class ESProvider {
         answers = new HashMap<>();
         Ui ui = new Ui();
 
-        while(ruleParser.getRuleRepository().getIterator().hasNext()){
+        while (ruleParser.getRuleRepository().getIterator().hasNext()) {
             String input;
             int i = 0;
-            for (Question question: ruleParser.getRuleRepository().getQuestions()) {
+            for (Question question : ruleParser.getRuleRepository().getQuestions()) {
                 Question current = ruleParser.getRuleRepository().getIterator().next();
                 System.out.println(current.getQuestion());
                 input = ui.getInput();
-                while(!isValid(input)) {
+                while (!isValid(input)) {
                     System.out.println(ruleParser.getRuleRepository().getQuestions().get(i).getQuestion());
                     input = ui.getInput();
                 }
@@ -44,17 +43,17 @@ public class ESProvider {
 
 
     public boolean getAnswerByQuestion(String questionId) {
-        return false;
+        return answers.get(questionId);
     }
 
     public String evaluate() {
         return null;
     }
 
-    public boolean isValid(String answer){
-        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("no")){
+    public boolean isValid(String answer) {
+        if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("no")) {
             return true;
-        }else{
+        } else {
             return false;
         }
 

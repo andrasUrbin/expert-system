@@ -23,7 +23,5 @@ public class Main {
         // System.out.println(ruleParser.getRuleRepository().getIterator().hasNext());
 
 
-
-
     }
 }
