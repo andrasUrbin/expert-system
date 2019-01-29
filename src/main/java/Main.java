@@ -16,6 +16,8 @@ public class Main {
             System.out.println(question.getQuestion());
         }
 
+       // System.out.println(ruleParser.getRuleRepository().getIterator().hasNext());
+
 
 
 

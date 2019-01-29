@@ -22,4 +22,268 @@
             <Eval id="console">true</Eval>
         </Evals>
     </Fact>
+    <Fact id="ac">
+        <Description value="Assassin's Creed: Origins"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="batman">
+        <Description value="Batman Arkham City"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="witcher">
+        <Description value="The Witcher 3: Wild Hunt"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="ds">
+        <Description value="Dark Souls III"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="DOTA2">
+        <Description value="DOTA2"/>
+        <Evals>
+            <Eval id="single">false</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">true</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="HMM3">
+        <Description value="Heroes of Might and Magic 3"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="BGII">
+        <Description value="Baldur's Gate II"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="skyrim">
+        <Description value="The Elder Scrolls: Skyrim"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="SMO">
+        <Description value="Super Mario Odyssey"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="ori">
+        <Description value="Ori and The Blind Forest"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="hl2">
+        <Description value="Half-Life 2"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="sc2">
+        <Description value="StarCraft 2: Wings of Liberty"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">true</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="F3">
+        <Description value="Fallout 3"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="tloz">
+        <Description value="The Legend of Zelda: Breath of The Wild"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="portal2">
+        <Description value="Portal 2"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="nfsug">
+        <Description value="Need for Speed: Underground"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="gta">
+        <Description value="Grand Theft Auto: San Andreas"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="pubg">
+        <Description value="Player Unknown's: Battlegrounds"/>
+        <Evals>
+            <Eval id="single">false</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="bb">
+        <Description value="Bloodborne"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="hk">
+        <Description value="Hollow Knight"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="CSGO">
+        <Description value="Counter-Strike: Global Offensive"/>
+        <Evals>
+            <Eval id="single">false</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">true</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="MC">
+        <Description value="Minecraft"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">true</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="littleBigPlanet">
+        <Description value="Little Big Planet"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="legoStarWars">
+        <Description value="LEGO Star Wars: The Force Awakens"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
 </Facts>
