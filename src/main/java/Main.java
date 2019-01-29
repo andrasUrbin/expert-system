@@ -6,7 +6,7 @@ public class Main {
 
         ESProvider esp = new ESProvider(factParser, ruleParser);
         System.out.println("TESTING FACTS");
-        for (Fact fact:factParser.getFactRepository().getFacts()
+        /*for (Fact fact:factParser.getFactRepository().getFacts()
              ) {
             System.out.println(fact.getDescription());
         }
@@ -15,6 +15,9 @@ public class Main {
              ) {
             System.out.println(question.getQuestion());
         }
+        */
+
+        esp.collectAnswers();
 
        // System.out.println(ruleParser.getRuleRepository().getIterator().hasNext());
 

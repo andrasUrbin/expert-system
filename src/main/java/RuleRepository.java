@@ -37,5 +37,9 @@ public class RuleRepository {
                 return null;
             }
         }
+
+        public Question current(){
+            return questions.get(index);
+        }
     }
 }

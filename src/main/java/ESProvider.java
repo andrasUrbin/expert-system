@@ -16,12 +16,16 @@ public class ESProvider {
     //Skeleton code
     public void collectAnswers() {
         answers = new HashMap<>();
-        Ui ui = new ui();
+        Ui ui = new Ui();
         while(ruleParser.getRuleRepository().getIterator().hasNext()){
+            String input;
             do{
-                System.out.println("Question");
-                String input = ui.getInput();
+                System.out.println(ruleParser.getRuleRepository().getIterator().next().getQuestion());
+                input = ui.getInput();
             }while(!isValid(input));
+            for (Question question:ruleParser.getRuleRepository().getQuestions()) {
+                answers.put(question.getId(), Boolean.parseBoolean(input));
+            }
         }
 
     }
