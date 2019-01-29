@@ -7,9 +7,9 @@ public class Answer {
 
     public boolean evaluateAnswerByInput(String input) {
 
-        if (input.equals("yes")) {
+        if (input.equalsIgnoreCase("yes")) {
             return true;
-        } else if (input.equals("no")) {
+        } else if (input.equalsIgnoreCase("no")) {
             return false;
         }
         return false;
@@ -18,4 +18,5 @@ public class Answer {
     public void addValue(Value value) {
         valueList.add(value);
     }
+
 }
