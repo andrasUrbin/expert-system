@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ESProvider {
 
@@ -47,7 +46,23 @@ public class ESProvider {
     }
 
     public String evaluate() {
-        return null;
+        String result = "";
+        List<String> results = new ArrayList<>();
+        Map<String, Map<String, Boolean>> factEvaluations = new HashMap<>();
+        for (Fact fact:factParser.getFactRepository().getFacts()) {
+            factEvaluations.put(fact.getDescription(),fact.getEvaluations());
+        }
+
+        for (Map.Entry<String, Map<String,Boolean>> fact: factEvaluations.entrySet()){
+            if (fact.getValue().equals(answers)) {
+                results.add(fact.getKey());
+            }
+        }
+
+        for (String element:results) {
+            result += element + "\n";
+        }
+        return result;
     }
 
     public boolean isValid(String answer) {

@@ -23,13 +23,13 @@
         </Answer>
     </Rule>
     <Rule id="f2play">
-        <Question>Do you have money to spend?</Question>
+        <Question>Are you interested in a free game?</Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="no"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="yes"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>

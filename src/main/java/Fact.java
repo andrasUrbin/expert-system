@@ -30,4 +30,7 @@ public class Fact {
         return this.description;
     }
 
+    public Map<String, Boolean> getEvaluations() {
+        return evaluations;
+    }
 }
