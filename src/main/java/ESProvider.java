@@ -7,6 +7,7 @@ public class ESProvider {
     private RuleParser ruleParser;
     private Map<String, Boolean> answers;
 
+
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
         this.factParser = factParser;
         this.ruleParser = ruleParser;
@@ -15,9 +16,11 @@ public class ESProvider {
     //Skeleton code
     public void collectAnswers() {
         answers = new HashMap<>();
+        Ui ui = new ui();
         while(ruleParser.getRuleRepository().getIterator().hasNext()){
             do{
                 System.out.println("Question");
+                String input = ui.getInput();
             }while(!isValid(input));
         }
 
