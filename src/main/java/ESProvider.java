@@ -26,18 +26,29 @@ public class ESProvider {
 
         while(ruleParser.getRuleRepository().getIterator().hasNext()){
             String input;
+<<<<<<< HEAD
 
             for (Question question:ruleParser.getRuleRepository().getQuestions()) {
                 do {
                     System.out.println(ruleParser.getRuleRepository().getIterator().next().getQuestion());
+=======
+            int i = 0;
+            for (Question question: ruleParser.getRuleRepository().getQuestions()) {
+                Question current = ruleParser.getRuleRepository().getIterator().next();
+                System.out.println(current.getQuestion());
+                input = ui.getInput();
+                while(!isValid(input)) {
+                    System.out.println(ruleParser.getRuleRepository().getQuestions().get(i).getQuestion());
+>>>>>>> 93d0c3f076a2a8c2c40b9b964b7f2dc594e2daab
                     input = ui.getInput();
-                    answers.put(question.getId(), answer.evaluateAnswerByInput(input));
-                } while (!isValid(input));
+                }
+                i++;
+                answers.put(question.getId(), answer.evaluateAnswerByInput(input));
 
             }
         }
-
     }
+
 
     public boolean getAnswerByQuestion(String questionId) {
         return false;
