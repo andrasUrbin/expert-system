@@ -62,6 +62,7 @@ public class Ui {
                         do {
                             int counter = 1;
                             clearScreen();
+                            System.out.println("Based on your answers, we recommend these games for you:\n");
                             for(Fact fact: esp.evaluate()) {
                                 System.out.println(counter + ". " + fact.getDescription());
                                 counter++;
