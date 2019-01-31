@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ESProvider {
 
@@ -7,7 +6,6 @@ public class ESProvider {
     private RuleParser ruleParser;
     private Map<String, Boolean> answers;
     private Answer answer = new Answer();
-
 
 
     public Map<String, Boolean> getAnswers() {
@@ -24,7 +22,7 @@ public class ESProvider {
         answers = new HashMap<>();
         Ui ui = new Ui();
 
-        while(ruleParser.getRuleRepository().getIterator().hasNext()){
+        while (ruleParser.getRuleRepository().getIterator().hasNext()) {
             String input;
 <<<<<<< HEAD
 
@@ -33,11 +31,11 @@ public class ESProvider {
                     System.out.println(ruleParser.getRuleRepository().getIterator().next().getQuestion());
 =======
             int i = 0;
-            for (Question question: ruleParser.getRuleRepository().getQuestions()) {
+            for (Question question : ruleParser.getRuleRepository().getQuestions()) {
                 Question current = ruleParser.getRuleRepository().getIterator().next();
                 System.out.println(current.getQuestion());
                 input = ui.getInput();
-                while(!isValid(input)) {
+                while (!isValid(input)) {
                     System.out.println(ruleParser.getRuleRepository().getQuestions().get(i).getQuestion());
 >>>>>>> 93d0c3f076a2a8c2c40b9b964b7f2dc594e2daab
                     input = ui.getInput();
@@ -51,17 +49,33 @@ public class ESProvider {
 
 
     public boolean getAnswerByQuestion(String questionId) {
-        return false;
+        return answers.get(questionId);
     }
 
     public String evaluate() {
-        return null;
+        String result = "";
+        List<String> results = new ArrayList<>();
+        Map<String, Map<String, Boolean>> factEvaluations = new HashMap<>();
+        for (Fact fact:factParser.getFactRepository().getFacts()) {
+            factEvaluations.put(fact.getDescription(),fact.getEvaluations());
+        }
+
+        for (Map.Entry<String, Map<String,Boolean>> fact: factEvaluations.entrySet()){
+            if (fact.getValue().equals(answers)) {
+                results.add(fact.getKey());
+            }
+        }
+
+        for (String element:results) {
+            result += element + "\n";
+        }
+        return result;
     }
 
-    public boolean isValid(String answer){
-        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("no")){
+    public boolean isValid(String answer) {
+        if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("no")) {
             return true;
-        }else{
+        } else {
             return false;
         }
 
