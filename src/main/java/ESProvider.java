@@ -45,8 +45,7 @@ public class ESProvider {
         return answers.get(questionId);
     }
 
-    public String evaluate() {
-        String result = "";
+    public List<String> evaluate() {
         List<String> results = new ArrayList<>();
         Map<String, Map<String, Boolean>> factEvaluations = new HashMap<>();
         for (Fact fact:factParser.getFactRepository().getFacts()) {
@@ -58,15 +57,7 @@ public class ESProvider {
                 results.add(fact.getKey());
             }
         }
-
-        for (String element:results) {
-            result += element + "\n";
-        }
-
-        if (results.size() == 0){
-            return "No such game found.";
-        }
-        return result;
+        return results;
     }
 
     public boolean isValid(String answer) {
