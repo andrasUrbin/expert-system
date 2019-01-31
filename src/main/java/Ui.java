@@ -26,7 +26,6 @@ public class Ui {
     public void menu() {
 
         int option;
-        int subOption;
         do {
             clearScreen();
             FactParser factParser = new FactParser("src/main/resources/Facts.xml");
@@ -55,30 +54,26 @@ public class Ui {
                     if(esp.evaluate().size() == 0){
                         System.out.println("No such game found");
                     } else {
+                        int gameChoice;
                         int counter = 1;
                         for(Fact fact: esp.evaluate()) {
                             System.out.println(counter + ". " + fact.getDescription());
                             counter++;
                         }
                         do {
-                            System.out.println("\n1. Game info page\n0. Back to main menu");
-                            subOption = menuScanner.nextInt();
-                            System.out.println();
-                            System.out.println("Type the number of the game you want to check: ");
-                            int gameChoice;
+                            System.out.print("\n1. Game info page (please specify the number or hit 0 to go back): ");
+                            gameChoice = menuScanner.nextInt();
                             String id = "";
-                            switch (subOption) {
-                                case 1:
-                                    gameChoice = menuScanner.nextInt();
+                                if (gameChoice != 0) {
                                     for (int j = 0; j < esp.evaluate().size(); j++) {
                                         if (gameChoice == j) {
-                                            id = esp.evaluate().get(j-1).getId();
+                                            id = esp.evaluate().get(j - 1).getId();
                                         }
                                     }
                                     openLink(getLink(id));
+                                }
 
-                            }
-                        } while (subOption != 0);
+                        } while (gameChoice != 0);
                     }
             }
         } while(option != 0);
