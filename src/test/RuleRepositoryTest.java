@@ -6,5 +6,7 @@ class RuleRepositoryTest {
 
     @Test
     void testRuleRepository() {
+        RuleRepository ruleRepo = new RuleRepository();
+        assertTrue(ruleRepo.getQuestions().isEmpty());
     }
 }
