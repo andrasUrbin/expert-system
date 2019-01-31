@@ -275,7 +275,6 @@
             <Eval id="console">true</Eval>
         </Evals>
     </Fact>
-    // 26. Fact
     <Fact id="redDead2">
         <Description value="Red Dead Redemption 2"/>
         <Evals>
