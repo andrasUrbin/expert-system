@@ -6,5 +6,7 @@ class FactIteratorTest {
 
     @Test
     void testFactIterator() {
+        FactRepository factRepo = new FactRepository();
+        assertFalse(factRepo.getIterator().hasNext());
     }
 }

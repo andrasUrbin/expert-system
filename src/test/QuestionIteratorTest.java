@@ -6,5 +6,7 @@ class QuestionIteratorTest {
 
     @Test
     void testQuestionIterator() {
+        RuleRepository ruleRepo = new RuleRepository();
+        assertFalse(ruleRepo.getIterator().hasNext());
     }
 }

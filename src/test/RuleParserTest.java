@@ -6,5 +6,7 @@ class RuleParserTest {
 
     @Test
     void testRuleParser() {
+        RuleParser ruleParser = new RuleParser("src/main/resources/Facts.xml");
+        assertEquals(6, ruleParser.getRuleRepository().getQuestions().size());
     }
 }

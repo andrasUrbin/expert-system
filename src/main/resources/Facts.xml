@@ -99,17 +99,6 @@
             <Eval id="console">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="skyrim">
-        <Description value="The Elder Scrolls: Skyrim"/>
-        <Evals>
-            <Eval id="single">true</Eval>
-            <Eval id="multi">false</Eval>
-            <Eval id="f2play">false</Eval>
-            <Eval id="mature">true</Eval>
-            <Eval id="pc">true</Eval>
-            <Eval id="console">true</Eval>
-        </Evals>
-    </Fact>
     <Fact id="SMO">
         <Description value="Super Mario Odyssey"/>
         <Evals>
@@ -280,6 +269,172 @@
         <Evals>
             <Eval id="single">true</Eval>
             <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    // 26. Fact
+    <Fact id="redDead2">
+        <Description value="Red Dead Redemption 2"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="godOfWar">
+        <Description value="God of War"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="residentEvil">
+        <Description value="Resident Evil 4"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="bioShock">
+        <Description value="BioShock"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">true</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="SSBM">
+        <Description value="Super Smash Bros. Melee"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="TF2">
+        <Description value="Team Fortress 2"/>
+        <Evals>
+            <Eval id="single">false</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">true</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="DK2">
+        <Description value="Dungeon Keeper 2"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="themeHospital">
+        <Description value="Theme Hospital"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="prehistorik2">
+        <Description value="Prehistorik 2"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="MM7">
+        <Description value="Might and Magic VII: For Blood and Honor"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="civ5">
+        <Description value="Sid Meier's Civilization V"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="jj2">
+        <Description value="Jazz Jackrabbit 2"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="uncharted4">
+        <Description value="Uncharted 4: A Thief's End"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">true</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">false</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="fandango">
+        <Description value="Grim Fandango Remastered"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
+            <Eval id="f2play">false</Eval>
+            <Eval id="mature">false</Eval>
+            <Eval id="pc">true</Eval>
+            <Eval id="console">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="lifeIsStrange">
+        <Description value="Life is Strange"/>
+        <Evals>
+            <Eval id="single">true</Eval>
+            <Eval id="multi">false</Eval>
             <Eval id="f2play">false</Eval>
             <Eval id="mature">false</Eval>
             <Eval id="pc">true</Eval>

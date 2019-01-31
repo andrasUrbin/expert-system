@@ -6,5 +6,8 @@ class AnswerTest {
 
     @Test
     void testAnswer() {
+        Answer answer = new Answer();
+        assertTrue(answer.evaluateAnswerByInput("yes"));
+        assertFalse(answer.evaluateAnswerByInput("no"));
     }
 }
