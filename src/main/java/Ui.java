@@ -65,7 +65,7 @@ public class Ui {
                             gameChoice = menuScanner.nextInt();
                             String id = "";
                                 if (gameChoice != 0) {
-                                    for (int j = 0; j < esp.evaluate().size(); j++) {
+                                    for (int j = 0; j < esp.evaluate().size() + 1; j++) {
                                         if (gameChoice == j) {
                                             id = esp.evaluate().get(j - 1).getId();
                                         }
