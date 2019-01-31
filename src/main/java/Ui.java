@@ -32,7 +32,8 @@ public class Ui {
             RuleParser ruleParser = new RuleParser("src/main/resources/Rules.xml");
             ESProvider esp = new ESProvider(factParser, ruleParser);
 
-            System.out.println("Main Menu\n1. List games\n2. Filter games\n0. Exit");
+            System.out.println("Main Menu\n\n1. List games\n2. Filter games\n0. Exit\n");
+            System.out.print("Please select an option: ");
             Scanner menuScanner = new Scanner(System.in);
             option = menuScanner.nextInt();
             switch (option) {
@@ -40,6 +41,7 @@ public class Ui {
                     clearScreen();
                     FactRepository fp = factParser.getFactRepository();
                     int i = 1;
+                    clearScreen();
                     for (Fact fact: fp.getFacts()) {
                         System.out.println(i + ". " + fact.getDescription());
                         i++;
@@ -52,15 +54,18 @@ public class Ui {
                     clearScreen();
                     esp.collectAnswers();
                     if(esp.evaluate().size() == 0){
-                        System.out.println("No such game found");
+                        clearScreen();
+                        System.out.println("No such game found. Please try again!");
+                        promptEnterKey();
                     } else {
                         int gameChoice;
-                        int counter = 1;
-                        for(Fact fact: esp.evaluate()) {
-                            System.out.println(counter + ". " + fact.getDescription());
-                            counter++;
-                        }
                         do {
+                            int counter = 1;
+                            clearScreen();
+                            for(Fact fact: esp.evaluate()) {
+                                System.out.println(counter + ". " + fact.getDescription());
+                                counter++;
+                            }
                             System.out.print("\n1. Game info page (please specify the number or hit 0 to go back): ");
                             gameChoice = menuScanner.nextInt();
                             String id = "";
