@@ -19,4 +19,5 @@ public class Answer {
     public void addValue(Value value) {
         valueList.add(value);
     }
+
 }

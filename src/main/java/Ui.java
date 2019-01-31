@@ -1,3 +1,9 @@
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URI;
 import java.util.Scanner;
 import java.util.List;
 
@@ -50,18 +56,27 @@ public class Ui {
                         System.out.println("No such game found");
                     } else {
                         int counter = 1;
-                        for(String fact: esp.evaluate()) {
-                            System.out.println(counter + ". " + fact);
+                        for(Fact fact: esp.evaluate()) {
+                            System.out.println(counter + ". " + fact.getDescription());
                             counter++;
                         }
                         do {
                             System.out.println("\n1. Game info page\n0. Back to main menu");
-                            Scanner subScanner = new Scanner(System.in);
-                            subOption = subScanner.nextInt();
+                            subOption = menuScanner.nextInt();
                             System.out.println();
+                            System.out.println("Type the number of the game you want to check: ");
+                            int gameChoice;
+                            String id = "";
                             switch (subOption) {
                                 case 1:
-                                    System.out.println("Not implemented yet");
+                                    gameChoice = menuScanner.nextInt();
+                                    for (int j = 0; j < esp.evaluate().size(); j++) {
+                                        if (gameChoice == j) {
+                                            id = esp.evaluate().get(j-1).getId();
+                                        }
+                                    }
+                                    openLink(getLink(id));
+
                             }
                         } while (subOption != 0);
                     }
@@ -78,5 +93,83 @@ public class Ui {
         System.out.println("\n Press \"ENTER\" to continue...");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
+    }
+
+    public void openLink(String link) {
+        Desktop desktop = Desktop.getDesktop();
+        URI uri = URI.create(link);
+        try {
+            desktop.browse(uri);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String getLink(String id) {
+        String link = "";
+        String[][] data = read("src/main/resources/links.csv");
+        for (int i = 0; i < data.length; i++) {
+            if (id.equals(data[i][0])) {
+                link = data[i][1];
+            }
+        }
+        return link;
+    }
+
+    public String[][] read(String file) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String[][] data = new String[0][0];
+            while (br.ready()) {
+                int numOfLines = countLines(file);
+                int numOfFields = countCols(file);
+
+                data = new String[numOfLines][numOfFields];
+                for (int i = 0; i < numOfLines; i++) {
+                    data[i] = br.readLine().split(",");
+                }
+            }
+            return data;
+
+        } catch (FileNotFoundException f) {
+            System.out.println("File not found!");
+            return null;
+        } catch (IOException e) {
+            System.out.println("IO Exception occured!");
+            return null;
+        }
+    }
+
+    public int countLines(String file) {
+        int i = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            while (br.ready()) {
+                br.readLine();
+                i++;
+            }
+            return i;
+
+        } catch (FileNotFoundException f) {
+            System.out.println("File not found!");
+            return 0;
+        } catch (IOException e) {
+            System.out.println("IO Exception occured!");
+            return 0;
+        }
+    }
+
+    public int countCols(String file) {
+        int i = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String countFieldString = br.readLine();
+            i = countFieldString.length() - countFieldString.replace(",", "").length() + 1;
+            return i;
+
+        } catch (FileNotFoundException f) {
+            System.out.println("File not found!");
+            return 0;
+        } catch (IOException e) {
+            System.out.println("IO Exception occured!");
+            return 0;
+        }
     }
 }

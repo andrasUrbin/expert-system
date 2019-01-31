@@ -45,14 +45,14 @@ public class ESProvider {
         return answers.get(questionId);
     }
 
-    public List<String> evaluate() {
-        List<String> results = new ArrayList<>();
-        Map<String, Map<String, Boolean>> factEvaluations = new HashMap<>();
+    public List<Fact> evaluate() {
+        List<Fact> results = new ArrayList<>();
+        Map<Fact, Map<String, Boolean>> factEvaluations = new HashMap<>();
         for (Fact fact:factParser.getFactRepository().getFacts()) {
-            factEvaluations.put(fact.getDescription(),fact.getEvaluations());
+            factEvaluations.put(fact,fact.getEvaluations());
         }
 
-        for (Map.Entry<String, Map<String,Boolean>> fact: factEvaluations.entrySet()){
+        for (Map.Entry<Fact, Map<String,Boolean>> fact: factEvaluations.entrySet()){
             if (fact.getValue().equals(answers)) {
                 results.add(fact.getKey());
             }
