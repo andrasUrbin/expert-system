@@ -24,20 +24,13 @@ public class ESProvider {
 
         while (ruleParser.getRuleRepository().getIterator().hasNext()) {
             String input;
-<<<<<<< HEAD
-
-            for (Question question:ruleParser.getRuleRepository().getQuestions()) {
-                do {
-                    System.out.println(ruleParser.getRuleRepository().getIterator().next().getQuestion());
-=======
             int i = 0;
             for (Question question : ruleParser.getRuleRepository().getQuestions()) {
                 Question current = ruleParser.getRuleRepository().getIterator().next();
-                System.out.println(current.getQuestion());
+                System.out.println(current.getQuestion() + " [Yes / No]");
                 input = ui.getInput();
                 while (!isValid(input)) {
-                    System.out.println(ruleParser.getRuleRepository().getQuestions().get(i).getQuestion());
->>>>>>> 93d0c3f076a2a8c2c40b9b964b7f2dc594e2daab
+                    System.out.println(ruleParser.getRuleRepository().getQuestions().get(i).getQuestion() + " [Yes / No]");
                     input = ui.getInput();
                 }
                 i++;
@@ -68,6 +61,10 @@ public class ESProvider {
 
         for (String element:results) {
             result += element + "\n";
+        }
+
+        if (results.size() == 0){
+            return "No such game found.";
         }
         return result;
     }
