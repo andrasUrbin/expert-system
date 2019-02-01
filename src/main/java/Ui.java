@@ -10,6 +10,8 @@ import java.util.List;
 
 public class Ui {
 
+    private Scanner menuScanner = new Scanner(System.in);
+
     public String getInput() {
         Scanner reader = new Scanner(System.in);
         String input = reader.nextLine();
@@ -34,14 +36,14 @@ public class Ui {
 
             System.out.println("Main Menu\n\n1. List games\n2. Filter games\n0. Exit\n");
             System.out.print("Please select an option: ");
-            Scanner menuScanner = new Scanner(System.in);
+
             option = menuScanner.nextInt();
+            menuScanner.nextLine();
             switch (option) {
                 case 1:
                     clearScreen();
                     FactRepository fp = factParser.getFactRepository();
                     int i = 1;
-                    clearScreen();
                     for (Fact fact: fp.getFacts()) {
                         System.out.println(i + ". " + fact.getDescription());
                         i++;
@@ -69,6 +71,7 @@ public class Ui {
                             }
                             System.out.print("\n1. Game info page (please specify the number or hit 0 to go back): ");
                             gameChoice = menuScanner.nextInt();
+                            menuScanner.nextLine();
                             String id = "";
                                 if (gameChoice != 0) {
                                     for (int j = 0; j < esp.evaluate().size() + 1; j++) {
@@ -92,8 +95,7 @@ public class Ui {
 
     public void promptEnterKey(){
         System.out.println("\n Press \"ENTER\" to continue...");
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+        menuScanner.nextLine();
     }
 
     public void openLink(String link) {
