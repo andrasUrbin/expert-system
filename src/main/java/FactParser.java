@@ -24,7 +24,7 @@ public class FactParser extends XMLParser {
             Element tempElement = (Element) tempNode;
             String id = tempElement.getAttribute("id");
             Node descriptionNode = tempElement.getElementsByTagName("Description").item(0);
-            String description = ((Element)descriptionNode).getAttribute("value");
+            String description = ((Element) descriptionNode).getAttribute("value");
 
             Fact fact = new Fact(id, description);
             setFactEvaluations(fact, tempElement);
@@ -44,5 +44,4 @@ public class FactParser extends XMLParser {
             fact.setFactValueById(id, Boolean.valueOf(value)); // setting the value of each fact object based on their id
         }
     }
-
 }

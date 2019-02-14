@@ -2,7 +2,6 @@ import java.util.List;
 
 public abstract class Value {
 
-
     protected boolean selectionType;
     private List<String> values;
 
